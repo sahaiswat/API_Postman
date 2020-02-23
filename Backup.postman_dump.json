@@ -1,0 +1,391 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "237daec5-387f-4033-8af9-f13e43cafff2",
+			"name": "Collection",
+			"description": "",
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2f9d6424-b601-4333-b19d-17f6b3c09fbc",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "489f1162-6f79-41a3-9fc4-c9bf745821dd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"variables": [
+				{
+					"key": "Url",
+					"value": "https://api.unleashedsoftware.com",
+					"disabled": false
+				}
+			],
+			"order": [],
+			"folders_order": [
+				"c837e5dc-637a-4821-a712-f635257f9366",
+				"4b1dc60f-e7a8-4803-b458-4e7fa050a5ae"
+			],
+			"protocolProfileBehavior": {},
+			"folders": [
+				{
+					"id": "c837e5dc-637a-4821-a712-f635257f9366",
+					"name": "GET",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"folder": null,
+					"order": [
+						"80e8dd3c-8714-4439-854b-21ae82b9451b",
+						"77e48913-0c39-4f9c-93bb-30f3945a6fe9"
+					],
+					"folders_order": [],
+					"protocolProfileBehavior": {},
+					"collectionId": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"folderId": "c837e5dc-637a-4821-a712-f635257f9366"
+				},
+				{
+					"id": "4b1dc60f-e7a8-4803-b458-4e7fa050a5ae",
+					"name": "POST",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"folder": null,
+					"order": [
+						"7a599e0d-3df9-43ea-9cd3-50ee68e0d3d0"
+					],
+					"folders_order": [],
+					"protocolProfileBehavior": {},
+					"collectionId": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"folderId": "4b1dc60f-e7a8-4803-b458-4e7fa050a5ae"
+				}
+			],
+			"requests": [
+				{
+					"id": "77e48913-0c39-4f9c-93bb-30f3945a6fe9",
+					"name": "View any product",
+					"url": "{{Url}}/Products/429333bc-95a9-4b35-b9aa-73199d0c9bf6",
+					"description": "View any product",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "Accept",
+							"value": "application/xml",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "api-auth-id",
+							"value": "232aea2b-2cc2-4b22-b441-3cd76ffc7a41",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "api-auth-signature",
+							"value": "NLuWG+R+nVVTRSHCpbQaFJgVbD0OZGdEAbzV7Z5InlA=",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "525f392c-26c9-45b5-b57f-41e7ea6a6adb",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"folder": "c837e5dc-637a-4821-a712-f635257f9366",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"headers": "Content-Type: application/xml\nAccept: application/xml\napi-auth-id: 232aea2b-2cc2-4b22-b441-3cd76ffc7a41\napi-auth-signature: NLuWG+R+nVVTRSHCpbQaFJgVbD0OZGdEAbzV7Z5InlA=\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "7a599e0d-3df9-43ea-9cd3-50ee68e0d3d0",
+					"name": "Create a new product",
+					"url": "{{Url}}/Products/429333bc-95a9-4b35-b9aa-87199d0c9bf6",
+					"description": "",
+					"data": [],
+					"dataOptions": null,
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "Accept",
+							"value": "application/xml",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "api-auth-id",
+							"value": "232aea2b-2cc2-4b22-b441-3cd76ffc7a41",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "api-auth-signature",
+							"value": "NLuWG+R+nVVTRSHCpbQaFJgVbD0OZGdEAbzV7Z5InlA=",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1ae0a1f7-e658-4ec3-81fd-4a8121009481",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "8549dfbb-2934-4803-badc-e44efde98b64",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([201]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"folder": "4b1dc60f-e7a8-4803-b458-4e7fa050a5ae",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Successful POST request\", function () {\n    pm.expect(pm.response.code).to.be.oneOf([201]);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"rawModeData": "<?xml version=\"1.0\"?> \r\n<Product xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://api.unleashedsoftware.com/version/1\"> \r\n  <Guid>429333bc-95a9-4b35-b9aa-87199d0c9bf6</Guid> \r\n  <LastModifiedOn>2016-03-09T20:28:27.1787202</LastModifiedOn> \r\n  <ProductCode>Bed</ProductCode> \r\n  <ProductDescription>Bed</ProductDescription> \r\n  <PackSize xsi:nil=\"true\" /> \r\n  <Width xsi:nil=\"true\" /> \r\n  <Height xsi:nil=\"true\" /> \r\n  <Depth xsi:nil=\"true\" /> \r\n  <Weight xsi:nil=\"true\" /> \r\n  <MinStockAlertLevel xsi:nil=\"true\" /> \r\n  <MaxStockAlertLevel xsi:nil=\"true\" /> \r\n  <ReOrderPoint xsi:nil=\"true\" /> \r\n  <NeverDiminishing>false</NeverDiminishing> \r\n  <LastCost>0.0000</LastCost> \r\n  <DefaultPurchasePrice xsi:nil=\"true\" /> \r\n  <DefaultSellPrice xsi:nil=\"true\" /> \r\n  <AverageLandPrice xsi:nil=\"true\" /> \r\n  <Obsolete>false</Obsolete> \r\n  <XeroTaxRate xsi:nil=\"true\" /> \r\n  <TaxablePurchase xsi:nil=\"true\" /> \r\n  <TaxableSales xsi:nil=\"true\" /> \r\n  <XeroSalesTaxRate xsi:nil=\"true\" /> \r\n  <IsComponent>false</IsComponent> \r\n  <IsAssembledProduct>false</IsAssembledProduct> \r\n  <CanAutoAssemble>false</CanAutoAssemble> \r\n  <CreatedBy>sandbox@unleashedsoftware.com</CreatedBy> \r\n</Product>",
+					"headers": "Content-Type: application/xml\nAccept: application/xml\napi-auth-id: 232aea2b-2cc2-4b22-b441-3cd76ffc7a41\napi-auth-signature: NLuWG+R+nVVTRSHCpbQaFJgVbD0OZGdEAbzV7Z5InlA=\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "80e8dd3c-8714-4439-854b-21ae82b9451b",
+					"name": "List of all Products",
+					"url": "{{Url}}/Products",
+					"description": "List of paginated Products",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "Accept",
+							"value": "application/xml",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "api-auth-id",
+							"value": "232aea2b-2cc2-4b22-b441-3cd76ffc7a41",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "api-auth-signature",
+							"value": "NLuWG+R+nVVTRSHCpbQaFJgVbD0OZGdEAbzV7Z5InlA=",
+							"description": "",
+							"type": "text",
+							"enabled": true
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "723d7179-3f11-402b-84b4-eeefe24c613f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"folder": "c837e5dc-637a-4821-a712-f635257f9366",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "237daec5-387f-4033-8af9-f13e43cafff2",
+					"headers": "Content-Type: application/xml\nAccept: application/xml\napi-auth-id: 232aea2b-2cc2-4b22-b441-3cd76ffc7a41\napi-auth-signature: NLuWG+R+nVVTRSHCpbQaFJgVbD0OZGdEAbzV7Z5InlA=\n",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "f82b31c4-e1fe-420c-a5b6-05ee724ad132",
+			"name": "Collection",
+			"description": "GET",
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "34e5b2cf-8845-486c-a36c-978b4b009416",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0928fc5f-cf8d-454f-a6c1-c00b1d4126e5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"variables": [
+				{
+					"key": "key",
+					"value": "",
+					"disabled": false
+				}
+			],
+			"order": [],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"folders": [],
+			"requests": []
+		}
+	],
+	"environments": [
+		{
+			"id": "6aa54155-7f31-48f2-91f3-b636993050ab",
+			"name": "Name",
+			"values": [
+				{
+					"key": "Swati",
+					"value": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "779c1f4d-2a20-40d1-94ac-339dd7bbf884",
+			"name": "Env",
+			"values": [
+				{
+					"key": "xyz",
+					"value": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "d8ec31c6-5162-42b3-b3c1-a65bca6de726",
+			"name": "Environment Setup",
+			"values": [
+				{
+					"key": "Content-Type",
+					"value": "application/xml",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/xml",
+					"enabled": true
+				},
+				{
+					"key": "api-auth-id",
+					"value": "232aea2b-2cc2-4b22-b441-3cd76ffc7a41",
+					"enabled": true
+				},
+				{
+					"key": "api-auth-signature",
+					"value": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "f13e4c04-8511-4f20-940d-b8778fe81a81",
+			"name": "Unleashed API - globals",
+			"values": []
+		},
+		{
+			"id": "fbe5540e-673b-4328-a21a-305c989ae60d",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
